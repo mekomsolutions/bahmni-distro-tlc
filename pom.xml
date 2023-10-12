@@ -524,7 +524,7 @@
             <version>1.7.0</version>
             <executions>
               <execution>
-                <id>validate-configurations</id>
+                <id>Validating the OpenMRS config...</id>
                 <phase>integration-test</phase>
                 <goals>
                   <goal>validate-configurations</goal>
