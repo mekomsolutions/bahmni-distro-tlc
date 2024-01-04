@@ -474,17 +474,17 @@
     <repository>
       <id>openmrs-repo</id>
       <name>OpenMRS Nexus Repository</name>
-      <url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+      <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
     </repository>
     <repository>
       <id>repo.mybahmni.org</id>
       <name>bahmni-artifactory-snapshots</name>
-      <url>http://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
+      <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/snapshot</url>
     </repository>
     <repository>
       <id>repo.mybahmni.org-release</id>
       <name>bahmni-artifactory-release</name>
-      <url>http://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
+      <url>https://repo.mybahmni.org.s3.amazonaws.com/artifactory/release</url>
     </repository>
     <repository>
       <id>sonatype-nexus-snapshots</id>
@@ -504,9 +504,20 @@
     <pluginRepository>
       <id>openmrs-repo</id>
       <name>OpenMRS Nexus Repository</name>
-      <url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+      <url>https://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
       <snapshots>
         <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>mks-nexus-public</id>
+      <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>mks-nexus-snapshots</id>
+      <url>https://nexus.mekomsolutions.net/repository/maven-snapshots/</url>
+      <snapshots>
+        <enabled>true</enabled>
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
