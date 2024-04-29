@@ -428,7 +428,10 @@
             <configuration>
               <target>
                 <copy todir="${project.build.directory}/configuration">
-                  <fileset dir="${distro.openmrsconfigDir}"/>
+                  <!-- Exclude files with names containing "*void*" -->
+                  <fileset dir="${distro.openmrsconfigDir}">
+                      <exclude name="**/*void*"/>
+                  </fileset>
                 </copy>
               </target>
             </configuration>
