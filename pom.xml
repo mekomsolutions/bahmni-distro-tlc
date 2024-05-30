@@ -27,10 +27,6 @@
 
     <!-- Core -->
     <openMRSVersion>2.1.1</openMRSVersion>
-    
-    <!-- Configs -->
-    <openmrsconfigVersion>1.1.0-SNAPSHOT</openmrsconfigVersion>
-    <bahmniconfigVersion>1.0.10-SNAPSHOT</bahmniconfigVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>a63f511</bahmniappsRevision>
@@ -49,7 +45,7 @@
     <bedmanagementVersion>5.11.0</bedmanagementVersion>
     <mailappenderVersion>0.90-SNAPSHOT</mailappenderVersion>
     <appointmentsVersion>1.0-SNAPSHOT</appointmentsVersion>
-    
+
     <!-- OpenMRS modules -->
     <owaVersion>1.9.0</owaVersion>
     <addresshierarchyVersion>2.17.0-SNAPSHOT</addresshierarchyVersion>
@@ -81,24 +77,6 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>openmrs-config-tlc</artifactId>
-      <type>zip</type>
-      <version>${openmrsconfigVersion}</version>
-    </dependency>
-    <dependency>
-      <groupId>net.mekomsolutions</groupId>
-      <artifactId>bahmni-config-tlc</artifactId>
-      <type>zip</type>
-      <version>${bahmniconfigVersion}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.bahmni</groupId>
-      <artifactId>reports</artifactId>
-      <type>war</type>
-      <version>${bahmniReportsVersion}</version>
-    </dependency>
     <dependency>
       <groupId>net.mekomsolutions</groupId>
       <artifactId>bahmniapps</artifactId>
@@ -314,34 +292,6 @@
               <includeTypes>jar, omod</includeTypes> <!-- copying jars and omods only -->
             </configuration>
           </execution>
-          <!-- OpenMRS config -->
-          <execution>
-            <id>copy-openmrs-config</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
-              <includeArtifactIds>openmrs-config-tlc</includeArtifactIds>
-            </configuration>
-          </execution>
-          <!-- Bahmni config -->
-          <execution>
-            <id>copy-bahmni-config</id>
-            <phase>package</phase>
-            <goals>
-              <goal>unpack-dependencies</goal>
-            </goals>
-            <configuration>
-              <excludeTransitive>true</excludeTransitive>
-              <useBaseVersion>true</useBaseVersion>
-              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
-              <includeArtifactIds>bahmni-config-tlc</includeArtifactIds>
-            </configuration>
-          </execution>
           <!-- Bahmni Apps -->
           <execution>
             <id>copy-bahmniapps</id>
@@ -372,6 +322,52 @@
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.3.1</version>
+        <executions>
+          <execution>
+            <!-- Copy Bahmni Config folder -->
+            <id>Copy local binaries/ resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>
+                ${project.build.directory}/${project.artifactId}-${project.version}/bahmni_config</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/configs/bahmni/frontend</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <!-- Copy OpenMRS Config folder -->
+            <id>Copy local configs/ resources</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>
+                ${project.build.directory}/${project.artifactId}-${project.version}/openmrs_config</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/configs/openmrs/initializer</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
         <version>1.7</version>
@@ -430,7 +426,7 @@
                 <copy todir="${project.build.directory}/configuration">
                   <!-- Exclude files with names containing "*void*" -->
                   <fileset dir="${distro.openmrsconfigDir}">
-                      <exclude name="**/*void*"/>
+                    <exclude name="**/*void*" />
                   </fileset>
                 </copy>
               </target>
@@ -471,7 +467,7 @@
       <id>mks-nexus-public</id>
       <url>https://nexus.mekomsolutions.net/repository/maven-public/</url>
       <snapshots>
-        <updatePolicy>always</updatePolicy>
+        <enabled>true</enabled>
       </snapshots>
     </repository>
     <repository>
@@ -498,7 +494,6 @@
       </releases>
       <snapshots>
         <enabled>true</enabled>
-        <updatePolicy>interval:10080</updatePolicy>
       </snapshots>
     </repository>
   </repositories>

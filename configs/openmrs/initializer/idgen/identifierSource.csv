@@ -1,0 +1,2 @@
+Uuid,Void/Retire,Identifier type,Name,Description,Prefix,Suffix,First identifier base,Min length,Max length,Base character set,_version:1,_order:1000
+b680db92-1028-46f5-b415-e7b49ceaed2c,,8d793bee-c2cc-11de-8d13-0010c6dffd0f,OpenMRS ID generator,Sequential generator for the OpenMRS Identifier,,,001000,7,7,0123456789,,

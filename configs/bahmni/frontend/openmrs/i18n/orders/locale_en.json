@@ -1,0 +1,10 @@
+{
+  "MODULE_LABEL_CHEM_ORDERS_KEY": "Chemistry Results",
+  "MODULE_LABEL_LAB_ORDERS_KEY": "Serology Results",
+  "MODULE_LABEL_HEMA_ORDERS_KEY": "Hematology Results",
+  "MODULE_LABEL_MICRO_ORDERS_KEY": "Microbiology Results",
+  "MODULE_LABEL_RADIOLOGY_ORDERS_KEY": "Radiology Results",
+  "OBS_ABNORMAL_TRANSLATE_KEY": "Abnormal",
+  "OBS_BOOLEAN_YES_KEY": "Yes",
+  "OBS_BOOLEAN_NO_KEY": "No"
+}

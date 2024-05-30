@@ -1,0 +1,590 @@
+{
+    "id": "bahmni.clinical",
+    "extensionPoints": [
+        {
+            "id": "org.bahmni.clinical.consultation.board",
+            "description": "Bahmni Clinical Consultation Page"
+        },
+        {
+            "id": "org.bahmni.clinical.conceptSetGroup.*",
+            "description": "Define conceptsets part of a conceptset group"
+        },
+        {
+            "id": "org.bahmni.clinical.orders",
+            "description": "Bahmni Orders Page"
+        },
+        {
+            "id": "org.bahmni.patient.search",
+            "description": "Bahmni Patient search, lookups Page"
+        }
+    ],
+    "contextModel": [
+        "patientUuid",
+        "visitUuid"
+    ],
+    "config": {
+        "showSaveConfirmDialog" : true,
+        "allowPatientSwitchOnConsultation": true,
+        "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
+        "quickPrints":false,
+        "networkConnectivity" : {
+            "showNetworkStatusMessage": false,
+            "networkStatusCheckInterval": 20000,
+            "locales" : [
+                { "locale" : "fr", "css" : "offline-language-french"},
+                { "locale" : "es", "css": "offline-language-spanish"},
+                { "locale" : "pt", "css": "offline-language-portuguese-brazil"}
+            ]
+        },
+        "diagnosisStatus": "Inactive",
+        "program": {
+            "patientInformation": {
+            }
+        },
+        "patientContext": {
+          "programAttributes": [
+          ],
+          "personAttributes": [
+            "givenNameLocal",
+            "familyNameLocal"
+          ],
+          "additionalPatientIdentifiers": [
+            "impl.legacyId"
+          ],
+          "preferredIdentifier": "Id_Number"
+      },
+      "obsIgnoreList": [
+        "REGISTRATION FEES",
+        "COMMENTS",
+        "Patient file"
+    ],
+      "otherInvestigationsMap": {
+      },
+      "allowConsultationWhenNoOpenVisit": false,
+      "maxConceptSetLevels": 3,
+      "allowOnlyCodedDiagnosis": true,
+      "conceptSetUI": {
+        "Cambodia_Complaint Desc common": {
+            "disableAddNotes": true,
+            "multiSelect": true
+        },
+        "Cambodia_Pregnancy Test": {
+            "disableAddNotes": true
+        },
+        "Cambodia_New Immunization": {
+            "multiSelect": true
+        },
+        "Cambodia_Past Medical History": {
+            "multiSelect": true
+        },
+        "Cambodia_Referred To": {
+            "required": true,
+            "conciseText": true
+        },
+        "Cambodia_ANC Referral": {
+            "required": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Immunizations": {
+            "multiSelect": true
+        },
+        "Cambodia_General Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_HEENT Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Cardiovascular Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Respiratory Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Gastrointestinal Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Genitourinary Female Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Genitourinary Male Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Neurologic Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Musculoskeletal Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Endocrine Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Skin Symptoms": {
+            "multiSelect": true
+        },
+        "Cambodia_Skin Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },        
+        "Cambodia_Head Circumference": {
+            "disableAddNotes": true
+        },
+        "Cambodia_Head Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Neck Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Ears Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Eyes Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Chest and Lungs Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Cardiovascular Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Regular Rate and Rhythm": {
+            "disableAddNotes": true
+        },
+        "Cambodia_Carotid bruit": {
+            "disableAddNotes": true
+        },
+        "Cambodia_Heartrate": {
+            "disableAddNotes": true
+        },
+        "Cambodia_Abdomen Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Genitourinary Female Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Genitourinary Male Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Flank and Back Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Musculoskeletal Exam Abnormalities": {
+            "multiSelect": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Missing Teeth": {
+            "multiSelect": true,
+            "autocomplete": true
+        },
+        "Cambodia_Teeth Filled": {
+            "multiSelect": true,
+            "autocomplete": true
+        },
+        "Cambodia_Teeth Extracted": {
+            "multiSelect": true,
+            "autocomplete": true
+        },
+        "Cambodia_Pulse Data": {
+            "hideAbnormalButton": false,
+            "disableAddNotes": true
+        },
+        "Cambodia_Systolic Blood Pressure Data": {
+          "hideAbnormalButton": false,
+          "disableAddNotes": true
+        },
+        "Cambodia_Diastolic Blood Pressure Data": {
+          "hideAbnormalButton": false,
+          "disableAddNotes": true
+        },
+        "Cambodia_Temperature Data": {
+          "hideAbnormalButton": false,
+          "disableAddNotes": true
+        },
+        "Cambodia_Respiratory Rate Data": {
+          "hideAbnormalButton": false,
+          "disableAddNotes": true
+        },
+        "Cambodia_Oxygen Saturation Data": {
+          "hideAbnormalButton": false,
+          "disableAddNotes": true
+        },
+        "Cambodia_Capillary Refill Time Data": {
+          "disableAddNotes": true,
+          "hideAbnormalButton": false
+        },
+        "Cambodia_Polio1": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Polio2": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Polio3": {
+          "disableAddNotes": true
+        },
+        "Cambodia_IPV": {
+          "disableAddNotes": true
+        },
+        "Cambodia_IPV, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_DTP-Hep-Hip1": {
+          "disableAddNotes": true
+        },
+        "Cambodia_DTP-Hep-Hip2": {
+          "disableAddNotes": true
+        },
+        "Cambodia_DTP-Hep-Hip3": {
+          "disableAddNotes": true
+        },
+        "Cambodia_PCV1": {
+          "disableAddNotes": true
+        },
+        "Cambodia_PCV2": {
+          "disableAddNotes": true
+        },
+        "Cambodia_PCV3": {
+          "disableAddNotes": true
+        },
+        "Cambodia_MR1": {
+          "disableAddNotes": true
+        },
+        "Cambodia_JE": {
+          "disableAddNotes": true
+        },
+        "Cambodia_MR0": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus1": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus2": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus3": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus4": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus5": {
+          "disableAddNotes": true
+        },
+        "Cambodia_MR2": {
+          "disableAddNotes": true
+        },
+        "Cambodia_BCG": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Polio1, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Polio2, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Polio3, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_DTP-Hep-Hip1, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_DTP-Hep-Hip2, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_DTP-Hep-Hip3, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_PCV1, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_PCV2, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_PCV3, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_MR1, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_JE, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_MR0, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus1, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus2, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus3, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus4, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Tetanus5, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_MR2, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_BCG, Date Given": {
+          "disableAddNotes": true
+        },
+        "Cambodia_HepB at birth": {
+          "disableAddNotes": true
+        },
+        "Cambodia_HepB at birth, time administered after birth": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Medications": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Has Allergies": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Muscle strength": {
+          "hideAbnormalButton": false,
+          "disableAddNotes": true
+        },
+        "Cambodia_Deep Tendon Reflex": {
+          "hideAbnormalButton": false,
+          "disableAddNotes": true
+        },
+        "Cambodia_Musculoskeletal and Neurological Exam": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Other Physical Abnormalities": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Is Small Dental Surgery Performed": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Coded Small Dental Surgery Performed": {
+          "multiSelect": true,
+          "disableAddNotes": true
+        },
+        "Cambodia_Other Small Dental Surgery": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Scaling": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Prevention Education": {
+          "disableAddNotes": true
+        },
+        "Cambodia_Prevention Fluoride": {
+          "disableAddNotes": true
+        },
+        "Cambodia_ANC Referral Reason": {
+            "disableAddNotes": true,
+            "multiSelect": true
+        },
+        "Cambodia_ANC_Symptoms": {
+            "disableAddNotes": true,
+            "multiSelect": true
+        },
+        "Cambodia_ANC Visit Number": {
+            "required": true,
+            "disableAddNotes": true
+        },
+        "Cambodia_Gestation": {
+            "disableAddNotes":true
+        },
+        "WEIGHT": {
+            "disableAddNotes":true
+        },        
+        "HEIGHT": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Pulse": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Fetal Pulse": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Height Of Uterus": {
+            "disableAddNotes":true
+        },        
+        "Cambodia_Stomach_Diameter": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Presenting Part": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Education Topic": {
+            "disableAddNotes":true,
+            "multiSelect": true
+        },
+        "Cambodia_Followup Appointment Date": {
+            "disableAddNotes":true,
+            "allowFutureDates":true
+        },
+        "Cambodia_Pregnancy Number": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Living Children": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Abortions": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Date of Last Delivery": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Newborn Survived": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Date of Last Menstrual Period": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Expected Due Date": {
+            "disableAddNotes":true,
+            "allowFutureDates":true
+        },
+        "Cambodia_Problems During Last Pregnancy": {
+            "disableAddNotes":true,
+            "multiSelect":true
+        },
+        "Cambodia_Problems During Last Delivery": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Previous Caesarean Section": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Acceptor": {
+            "required":true,
+            "disableAddNotes":true,
+            "multiSelect":true
+        },
+        "Cambodia_Stopped Contraception": {
+            "disableAddNotes":true
+        },
+        "Cambodia_Contraceptives Past": {
+            "disableAddNotes":true,
+            "multiSelect":true
+        },
+        "Cambodia_Contraceptives Present": {
+            "disableAddNotes":true,
+            "multiSelect":true
+        },
+        "Cambodia_Contraceptives Received": {
+            "disableAddNotes":true,
+            "multiSelect":true
+        },
+        "Cambodia_Contraceptive Education": {
+            "disableAddNotes":true,
+            "multiSelect":true
+        },
+        "Cambodia_LEU" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_NIT" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_URO" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_PRO" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_pH" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_BLO" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_SG" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_KET" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_BIL" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_GLU" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_ASC" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_Pregnancy Test" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_Fasting Blood Glucose" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_PP Blood Glucose" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_Malaria Rapid Test" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_Date of Delivery" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_Newborn Sex" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_Newborn Weight" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_PNC Problems During Delivery" : {
+          "multiSelect": true,
+          "disableAddNotes": true
+        },
+        "Cambodia_PNC First Visit" : {
+          "disableAddNotes": true
+        },
+        "Cambodia_Maternal Care" : {
+          "multiSelect": true,
+          "disableAddNotes": true
+        },
+        "Cambodia_Neonatal Care" : {
+          "multiSelect": true,
+          "disableAddNotes": true
+        },
+        "Cambodia_Counselling" : {
+          "multiSelect": true,
+          "disableAddNotes": true
+        },
+        "Cambodia_PNC Next Appointment" : {
+          "disableAddNotes": true,
+          "allowFutureDates": true
+        },
+        "Offline Diagnosis Data": {
+            "answersConceptName":"Offline Diagnosis",
+            "autocomplete":  true
+        },        
+        "Offline Diagnosis Entry": {
+            "allowAddMore":  true
+        },
+        "Offline Diagnosis order" : {
+            "required": true,
+            "disableAddNotes": true
+        },
+        "Offline Diagnosis Certainty" : {
+            "required": true,
+            "disableAddNotes": true
+        },
+        "defaults": {
+        }
+    },
+    "visitPage": {
+        "observationDisplay": {
+            "conceptNames": []
+        }
+    }
+}
+}

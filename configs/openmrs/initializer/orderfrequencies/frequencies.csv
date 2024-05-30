@@ -1,0 +1,6 @@
+Uuid,Void/Retire,Frequency per day,Concept frequency,_version:1,_order:7000
+,,1,QD - 1X /day,,
+,,2,BID - 2X /day,,
+,,3,TID - 3X /day,,
+,,4,QID - 4X /day,,
+,,0,STAT - Immediately,,

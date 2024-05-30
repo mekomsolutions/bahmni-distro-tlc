@@ -1,0 +1,40 @@
+Uuid,Void/Retire,Name,Description
+8d4907b2-c2cc-11de-8d13-0010c6dffd0f,,Test,Acq. during patient encounter (vitals, labs, etc.)
+8d490bf4-c2cc-11de-8d13-0010c6dffd0f,,Procedure,Describes a clinical procedure
+8d490dfc-c2cc-11de-8d13-0010c6dffd0f,,Drug,Drug
+8d4918b0-c2cc-11de-8d13-0010c6dffd0f,,Diagnosis,Conclusion drawn through findings
+8d491a9a-c2cc-11de-8d13-0010c6dffd0f,,Finding,Practitioner observation/finding
+8d491c7a-c2cc-11de-8d13-0010c6dffd0f,,Anatomy,Anatomic sites / descriptors
+8d491e50-c2cc-11de-8d13-0010c6dffd0f,,Question,Question (eg, patient history, SF36 items)
+8d492026-c2cc-11de-8d13-0010c6dffd0f,,LabSet,Panels
+8d4923b4-c2cc-11de-8d13-0010c6dffd0f,,MedSet,Term to describe medication sets
+8d492594-c2cc-11de-8d13-0010c6dffd0f,,ConvSet,Term to describe convenience sets
+8d492774-c2cc-11de-8d13-0010c6dffd0f,,Misc,Terms which don't fit other categories
+8d492954-c2cc-11de-8d13-0010c6dffd0f,,Symptom,Patient-reported observation
+8d492b2a-c2cc-11de-8d13-0010c6dffd0f,,Symptom/Finding,Observation that can be reported from patient or found on exam
+8d492d0a-c2cc-11de-8d13-0010c6dffd0f,,Specimen,Body or fluid specimen
+8d492ee0-c2cc-11de-8d13-0010c6dffd0f,,Misc Order,Orderable items which aren't tests or drugs
+824534e8-3f10-11e4-adec-0800271c1b75,,Concept Attribute,Concept Attribute class
+824a6818-3f10-11e4-adec-0800271c1b75,,Abnormal,Abnormal class
+824ea769-3f10-11e4-adec-0800271c1b75,,Duration,Duration class
+82516ba3-3f10-11e4-adec-0800271c1b75,,Concept Details,Concept Details class
+8e071bfe-520c-44c0-a89b-538e9129b42a,,Frequency,A class for order frequencies
+980fd002-3f10-11e4-adec-0800271c1b75,,Image,Image class
+981390a9-3f10-11e4-adec-0800271c1b75,,Computed,Computed
+bb5ca648-3f10-11e4-adec-0800271c1b75,,URL,URL
+0fb09bcb-47c6-11e4-8125-0800271c1b75,,Sample,Lab Samples Concept Class
+0fb2dd00-47c6-11e4-8125-0800271c1b75,,Department,Lab Departments Concept Class
+33a6291c-8a92-11e4-977f-0800271c1b75,,LabTest,Serology Tests
+33a83162-8a92-11e4-977f-0800271c1b75,,Radiology,Radiology Orders
+33ba1bef-8a92-11e4-977f-0800271c1b75,,Computed/Editable,Computed/Editable
+c2b3514b-b7fb-11e4-9c67-080027b662ec,,Case Intake,Case Intake class
+692fef5f-12b2-11e6-8c00-080027d2adbd,,Bacteriology Attributes,Bacteriology Attributes Concept Class
+6931feac-12b2-11e6-8c00-080027d2adbd,,Bacteriology Results,Bacteriology Results Concept Class
+6b01c3e9-12b2-11e6-8c00-080027d2adbd,,Unknown,Unknown class
+f0f29072-7b1c-11e6-b0eb-0800276b4d49,,Video,Video class
+a9405010-447d-11e8-bb61-0242ac110002,,ChemSet,Panels
+a940930c-447d-11e8-bb61-0242ac110002,,ChemTest,Chem Tests
+a9412a79-447d-11e8-bb61-0242ac110002,,HemaSet,Panels
+a941799c-447d-11e8-bb61-0242ac110002,,HemaTest,Hema Tests
+a94214b7-447d-11e8-bb61-0242ac110002,,MicroSet,Panels
+a9423d35-447d-11e8-bb61-0242ac110002,,MicroTest,Micro Tests

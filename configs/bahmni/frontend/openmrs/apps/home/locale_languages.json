@@ -1,0 +1,12 @@
+{
+  "locales": [
+    {
+      "code": "km",
+      "nativeName": "ភាសាខ្មែរ"
+    },
+    {
+      "code": "en",
+      "nativeName": "English"
+    }
+  ]
+}

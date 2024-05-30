@@ -1,0 +1,73 @@
+{
+    "search":{
+        "id": "bahmni.registration.navigation.patient.search",
+        "extensionPointId": "org.bahmni.registration.navigation",
+        "type": "link",
+        "translationKey":"REGISTRATION_SEARCH_CONFIG_KEY",
+        "url": "/search",
+        "shortcutKey": "REGISTRATION_SEARCH_CONFIG_ACCESS_KEY",
+        "icon": "fa-search",
+        "order": 1,
+        "requiredPrivilege": "View Patients"
+    },
+    "createNew":{
+        "id": "bahmni.registration.navigation.patient.create",
+        "extensionPointId": "org.bahmni.registration.navigation",
+        "type": "link",
+        "translationKey": "REGISTRATION_CREATE_NEW_CONFIG_KEY",
+        "url": "/patient/new",
+        "icon": "fa-plus",
+        "shortcutKey": "REGISTRATION_CREATE_NEW_CONFIG_ACCESS_KEY",
+        "order": 2,
+        "requiredPrivilege": "Add Patients"
+    },
+    "view":{
+        "id": "bahmni.patient.search.result.action.edit",
+        "extensionPointId": "org.bahmni.registration.patient.search.result.action",
+        "type": "link",
+        "translationKey": "REGISTRATION_VIEW_CONFIG_KEY",
+        "url": "/patient/{{patientUuid}}",
+        "icon": "fa-patient-edit",
+        "order": 1,
+        "requiredPrivilege": "View Patients"
+    },
+    "vitals":{
+        "id": "bahmni.registration.conceptSetGroup.vitalSigns",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "config",
+        "extensionParams": {
+            "conceptName": "Cambodia_Vital Signs Extended Form",
+            "translationKey": "VITAL_SIGNS",
+            "conceptNames": ["Cambodia_Vital Signs Extended Form", "BMI Data", "BMI Status Data"],
+            "required": false,
+            "showLatest": true
+        },
+        "order": 1,
+        "requiredPrivilege": "Edit Visits"
+    },
+    "referredFrom":{
+        "id": "bahmni.registration.conceptSetGroup.referredFrom",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "config",
+        "extensionParams": {
+            "conceptName": "Cambodia_Referred From Set",
+            "translationKey": "REFERRAL",
+            "conceptNames": ["Cambodia_Referred From"],
+            "required":false
+        },
+        "order": 3,
+        "requiredPrivilege": "Edit Visits"
+    },
+    "feeInformation":{
+        "id": "bahmni.registration.conceptSetGroup.feeInformation",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "config",
+        "extensionParams": {
+            "conceptName": "Cambodia_Fee Information",
+            "translationKey": "FEE_INFORMATION_LOCALE_KEY",
+            "required":false
+        },
+        "order": 4,
+        "requiredPrivilege": "Edit Visits"
+    }
+}

@@ -1,0 +1,11 @@
+Uuid,Void/Retire,Name,Description,Parent,Attribute|id_prefix,Tags,Address 1,Address 2,City/Village,County/District,State/Province,Postal Code,Country
+1d0d52ce-f171-4be4-b91a-75c537238e89,,impl.khsachChiRos,"Khsach Chi Ros (KH), Kampong Kou (Stung Sen River)",,,Login Location; Visit Location,addresshierarchy.kampongKou,,addresshierarchy.khsachChiRos,addresshierarchy.kampongSvay,addresshierarchy.kampongThum,,addresshierarchy.cambodia
+265e0732-aa46-4993-bf8b-c85bed90a70d,,impl.balat,"Ba Lat (BL), Peam Bang",,,Login Location; Visit Location,addresshierarchy.peamBang,,addresshierarchy.baLat,addresshierarchy.stoung,addresshierarchy.kampongThum,,addresshierarchy.cambodia
+6076eb38-4a82-4990-a036-d2c32615d980,,impl.moatKhla,"Moat Khla (MK), Anlong Samnar",,,Login Location; Visit Location,addresshierarchy.anlongSamnar,,addresshierarchy.moatKhla,addresshierarchy.chiKraeng,addresshierarchy.siemReab,,addresshierarchy.cambodia
+6e91497c-5f68-451f-b5c1-d37a31235d43,,impl.stuengChrov,"Stueng Chrov (SC), Anlong Samnar",,,Login Location; Visit Location,addresshierarchy.anlongSamnar,,addresshierarchy.stuengChrov,addresshierarchy.chiKraeng,addresshierarchy.siemReab,,addresshierarchy.cambodia
+8d6c993e-c2cc-11de-8d13-0010c6dffd0f,True,Unknown Location,,,,,,,,,,,
+a14a55b4-f042-4f84-9ebc-0101c450f0c7,,impl.pechakrei,"Pechakrei (PC), Peam Bang",,,Login Location; Visit Location,addresshierarchy.peamBang,,addresshierarchy.pechakrei,addresshierarchy.stoung,addresshierarchy.kampongThum,,addresshierarchy.cambodia
+ac29ca41-16cc-4471-87b4-5d74dacbafda,,impl.peamBang,"Peam Bang (PB), Peam Bang",,,Login Location; Visit Location,addresshierarchy.peamBang,,addresshierarchy.peamBang,addresshierarchy.stoung,addresshierarchy.kampongThum,,
+b55b882d-24c7-4c54-945c-ac83e714ccf3,,impl.kampenhTralach,"Kampenh Tralach (KT), Peam Bang",,,Login Location; Visit Location,addresshierarchy.peamBang,,addresshierarchy.kampenhTralach,addresshierarchy.stoung,addresshierarchy.kampongThum,,
+baf7bd38-d225-11e4-9c67-080027b662ec,True,General Ward,General Ward,,,,,,,,,,
+c1e42932-3f10-11e4-adec-0800271c1b75,True,Ganiyari,Ganiyari hospital,,,,,,,,,,

@@ -1,0 +1,531 @@
+{
+    "general":{
+        "translationKey":"DASHBOARD_TAB_GENERAL_KEY",
+        "displayByDefault":true,
+        "maxRecentlyViewedPatients":10,
+        "sections":{
+            "patientInformation":{
+                "translationKey":"DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
+                "type":"patientInformation",
+                "displayOrder":1,
+                "ageLimit":12,
+                "patientAttributes":[
+                    "impl.guardianName"
+                ],
+                "addressFields":[
+                    "cityVillage",
+                    "countyDistrict",
+                    "stateProvince"
+                ]
+            },
+            "vitals":{
+                "translationKey":"DASHBOARD_TITLE_VITALS_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":7,
+                "dashboardConfig":{
+                    "showDetailsButton": true,
+                    "scope":"latest",
+                    "conceptNames":[
+                        "Cambodia_Pulse Data",
+                        "Cambodia_Systolic Blood Pressure Data",
+                        "Cambodia_Diastolic Blood Pressure Data",
+                        "Cambodia_Temperature Data",
+                        "Cambodia_Respiratory Rate Data",
+                        "Cambodia_Oxygen Saturation Data",
+                        "Cambodia_Capillary Refill Time Data",
+                        "Height",
+                        "WeighT",
+                        "BMI Data",
+                        "BMI Status Data"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "conceptNames":[
+                        "Cambodia_Pulse Data",
+                        "Cambodia_Diastolic Blood Pressure Data",
+                        "Cambodia_Systolic Blood Pressure Data",
+                        "Cambodia_Temperature Data",
+                        "Cambodia_Respiratory Rate Data",
+                        "Cambodia_Oxygen Saturation Data",
+                        "Cambodia_Capillary Refill Time Data",
+                        "Height",
+                        "WeighT",
+                        "BMI Data",
+                        "BMI Status Data"
+                    ],
+                    "pivotTable":{
+                        "groupBy":"encounters",
+                        "obsConcepts":[
+                            "Cambodia_Pulse Data",
+                            "Cambodia_Diastolic Blood Pressure Data",
+                            "Cambodia_Systolic Blood Pressure Data",
+                            "Cambodia_Temperature Data",
+                            "Cambodia_Respiratory Rate Data",
+                            "Cambodia_Oxygen Saturation Data",
+                            "Cambodia_Capillary Refill Time Data",
+                            "Height",
+                            "WeighT",
+                            "BMI Data",
+                            "BMI Status Data"
+                        ]
+                    }
+                }
+            },
+            "diagnosis":{
+                "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
+                "type":"diagnosis",
+                "showDetailsButton": true,
+                "showCertainty":true,
+                "showOrder":true,
+                "displayOrder":15
+            },
+            "offlineDiagnosis":{
+                "translationKey":"IMPL_OFFLINEDIAGNOSIS",
+                "type":"observation",
+                "isObservation": true,
+                "showDetailsButton": true,
+                "displayOrder":20,
+                "dashboardConfig": {
+                    "showDetailsButton": true,
+                    "showGroupDateTime": true,
+                    "conceptNames": [
+                        "Offline Diagnosis Entry"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "showGroupDateTime": false,
+                    "conceptNames":[
+                      "Offline Diagnosis Entry"
+                   ],
+                    "pivotTable":{
+                        "groupBy":"encounters",
+                        "obsConcepts":[
+                            "Offline Diagnosis Entry"
+                        ]
+                    }
+                }
+            },
+            "examination":{
+                "type":"forms",
+                "isObservation":true,
+                "dashboardConfig":{
+                    "numberOfVisits":"5",
+                    "showGroupDateTime":true,
+                    "showDetailsButton": true,
+                    "conceptNames":[
+                        "Cambodia_Consultation Form", "Cambodia_Consultation Form Offline"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showGroupDateTime":false,
+                    "showDetailsButton": true,
+                    "conceptNames":[
+                       "Cambodia_Consultation Form", "Cambodia_Consultation Form Offline"
+                    ],
+                    "pivotTable":{
+                        "groupBy":"encounters",
+                        "obsConcepts":[
+                            "Cambodia_Consultation Form", "Cambodia_Consultation Form Offline"
+                            ]
+                    }
+                },
+                "displayOrder":85,
+                "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY"
+            },
+            "customControl": {
+                "type": "custom",
+                "displayOrder": 13,
+                "showDetailsButton": true,
+                "config": {
+                    "showDetailsButton": true,
+                    "translationKey": "IMPL_IMMUNIZATIONS",
+                    "template": "<immunization></immunization>",
+                    "immunizationSets":[
+                        "Cambodia_Polio1 Set",
+                        "Cambodia_Polio2 Set",
+                        "Cambodia_Polio3 Set",
+                        "Cambodia_IPV Set",
+                        "Cambodia_DTP-Hep-Hip1 Set",
+                        "Cambodia_DTP-Hep-Hip2 Set",
+                        "Cambodia_DTP-Hep-Hip3 Set",
+                        "Cambodia_PCV1 Set",
+                        "Cambodia_PCV2 Set",
+                        "Cambodia_PCV3 Set",
+                        "Cambodia_JE Set",
+                        "Cambodia_BCG Set",
+                        "Cambodia_HepB at birth Set",
+                        "Cambodia_MR0 Set",
+                        "Cambodia_MR1 Set",
+                        "Cambodia_MR2 Set",
+                        "Cambodia_Tetanus1 Set",
+                        "Cambodia_Tetanus2 Set",
+                        "Cambodia_Tetanus3 Set",
+                        "Cambodia_Tetanus4 Set",
+                        "Cambodia_Tetanus5 Set"
+                    ],
+                    "immunizationQuestions":[
+                        "Cambodia_New Immunization"
+                    ],
+                    "immunizationsDisplayed": [
+                        "Cambodia_Polio1",
+                        "Cambodia_Polio2",
+                        "Cambodia_Polio3",
+                        "Cambodia_IPV",
+                        "Cambodia_DTP-Hep-Hip1",
+                        "Cambodia_DTP-Hep-Hip2",
+                        "Cambodia_DTP-Hep-Hip3",
+                        "Cambodia_PCV1",
+                        "Cambodia_PCV2",
+                        "Cambodia_PCV3",
+                        "Cambodia_JE",
+                        "Cambodia_BCG",
+                        "Cambodia_HepB at birth",
+                        "Cambodia_MR0",
+                        "Cambodia_MR1",
+                        "Cambodia_MR2",
+                        "Cambodia_Tetanus1",
+                        "Cambodia_Tetanus2",
+                        "Cambodia_Tetanus3",
+                        "Cambodia_Tetanus4",
+                        "Cambodia_Tetanus5"
+                    ]
+                }
+            },
+            "allergies":{
+                "type":"historyAndExamination",
+                "isObservation":true,
+                "displayType":"Half-Page",
+                "dashboardConfig":{
+                    "showDetailsButton": true,
+                    "showGroupDateTime": false,
+                    "conceptNames":[
+                        "Cambodia_Allergies"
+                    ]
+                },
+                "displayOrder":10,
+                "translationKey":"IMPL_ALLERGIES"
+            },
+            "history": {
+                "type": "forms",
+                "isObservation":true,
+                "displayOrder": 11,
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "showDetailsButton": true,
+                    "showGroupDateTime": false,
+                    "numberOfVisits": 10,
+                    "conceptNames": [
+                        "Cambodia_History Form"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "showGroupDateTime": true,
+                    "conceptNames":[
+                        "Cambodia_History Form"
+                    ],
+                    "pivotTable":{
+                    }
+                },
+                "translationKey": "DASHBOARD_TITLE_HISTORY_KEY"
+            },
+            "treatments":{
+                "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
+                "type":"treatment",
+                "displayOrder":14,
+                "dashboardConfig":{
+                    "showDetailsButton": true,
+                    "showRoute":true,
+                    "showDrugForm":true,
+                    "numberOfVisits":5,
+                    "showOtherActive":true
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
+                    "showFlowSheet":true,
+                    "showListView":true,
+                    "showRoute":true,
+                    "showDrugForm":true,
+                    "showOtherActive":true
+                }
+            },
+            "labTest": {
+                "type": "forms",
+                "isObservation":true,
+                "displayOrder": 50,
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "showDetailsButton": true,
+                    "numberOfVisits": 5,
+                    "conceptNames": [
+                        "Cambodia_Lab Tests Results Form"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "showGroupDateTime":false,
+                    "conceptNames":[
+                        "Cambodia_Lab Tests Results Form"
+                    ],
+                    "pivotTable":{
+                    }
+                },
+                "translationKey": "DASHBOARD_TITLE_LAB_RESULTS_KEY"
+            },
+            "offlineMed": {
+                "type": "forms",
+                "isObservation":true,
+                "displayOrder": 18,
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "showDetailsButton": true,
+                    "numberOfVisits": 5,
+                    "conceptNames":[
+                        "Cambodia_Offline Medication"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "showGroupDateTime":false,
+                    "conceptNames":[
+                        "Cambodia_Offline Medication"
+                    ],
+                    "pivotTable":{
+                        "groupBy":"encounters",
+                        "obsConcepts":[
+                            "Cambodia_Offline Medication"
+                        ]
+                    }
+                },
+                "translationKey": "IMPL_OFFLINEMED"
+            },
+            "chemOrders":{
+                "translationKey":"IMPL_CHEM",
+                "type":"ordersControl",
+                "orderType":"Chemistry Order",
+                "showDetailsButton": true,
+                "displayOrder":202,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Chemistry Order Fulfillment Form"
+                    ],
+                    "numberOfVisits": 5,
+                    "showHeader": true
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Chemistry Order Fulfillment Form"
+                    ]
+                }
+            },
+            "labOrders":{
+                "translationKey":"IMPL_LAB",
+                "type":"ordersControl",
+                "orderType": "Lab Order",
+                "showDetailsButton": true,
+                "displayOrder":245,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Lab Order Fulfillment Form"
+                    ],
+                    "numberOfVisits": 5,
+                    "showHeader": true
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Lab Order Fulfillment Form"
+                    ]
+                }
+            },
+            "hemaOrders":{
+                "translationKey":"IMPL_HEMA",
+                "type":"ordersControl",
+                "orderType": "Hematology Order",
+                "showDetailsButton": true,
+                "displayOrder":252,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Hematology Order Fulfillment Form"
+                    ],
+                    "numberOfVisits": 5,
+                    "showHeader": true
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Hematology Order Fulfillment Form"
+                    ]
+                }
+            },
+            "microOrders":{
+                "translationKey":"IMPL_MICRO",
+                "type":"ordersControl",
+                "orderType": "Microbiology Order",
+                "showDetailsButton": true,
+                "displayOrder":204,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Microbiology Order Fulfillment Form"
+                    ],
+                    "numberOfVisits": 5,
+                    "showHeader": true
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Microbiology Order Fulfillment Form"
+                    ]
+                }
+            },
+            "patientDocs": {
+                "displayOrder": 95,
+                "type":"historyAndExamination",
+                "isObservation":true,
+                "displayType":"Half-Page",
+                "dashboardConfig":{
+                    "showGroupDateTime":true,
+                    "showDetailsButton": true,
+                    "conceptNames":[
+                        "Image", "Patient file"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "showGroupDateTime":false,
+                    "conceptNames":[
+                        "Image", "Patient file"
+                    ],
+                    "pivotTable":{
+                    }
+                },
+                "translationKey": "VISIT_TITLE_PATIENT_FILES_KEY"
+            },
+            "dentalExam": {
+                "type": "forms",
+                "isObservation":true,
+                "displayOrder": 96,
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "showDetailsButton": true,
+                    "numberOfVisits": 5,
+                      "conceptNames": [
+                        "Cambodia_Dental Exam Form"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showDetailsButton": true,
+                    "showGroupDateTime":false,
+                    "conceptNames":[
+                        "Cambodia_Dental Exam Form"
+                    ],
+                    "pivotTable":{
+                    }
+                },
+                "translationKey": "IMPL_DENTAL"
+            },
+            "midwife": {
+                "type": "forms",
+                "hideEmptyDisplayControl": false,
+                "isObservation":true,
+                "displayOrder": 103,
+                "dashboardConfig": {
+                    "numberOfVisits": 5,
+                    "showDetailsButton": true,
+                    "showGroupDateTime":true,
+                    "conceptNames":[
+                        "Cambodia_ANC Obstetric History Form",
+                        "Cambodia_ANC Visit Form",
+                        "Cambodia_PNC Form",
+                        "Cambodia_Birth Spacing Form"
+                    ]
+                },
+                "expandedViewConfig":{
+                    "showGroupDateTime":false,
+                    "showDetailsButton": true,
+                    "conceptNames":[
+                        "Cambodia_ANC Obstetric History Form",
+                        "Cambodia_ANC Visit Form",
+                        "Cambodia_PNC Form",
+                        "Cambodia_Birth Spacing Form"
+                    ],
+                     "pivotTable":{
+                    }
+                },
+                "translationKey": "DASHBOARD_TITLE_GYNAECOLOGY_KEY"
+            },
+            "referral": {
+                "type": "forms",
+                "isObservation":true,
+                "displayOrder": 117,
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "showDetailsButton": true,
+                    "conceptNames": [ "Cambodia_Referral Form"],
+                    "scope":"latest"
+                },
+                "translationKey": "IMPL_REFERRALS"
+            },
+            "bpPulse":{
+                "type":"observationGraph",
+                "title":"BP / Pulse",
+                "translationKey": "IMPL_BP_PULSE",
+                "config":{
+                    "yAxisConcepts":[
+                        "Cambodia_Systolic Blood Pressure",
+                        "Cambodia_Diastolic Blood Pressure",
+                        "Cambodia_Pulse"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":15
+                },
+                "displayOrder":152
+            },
+            "weightBMI":{
+                "type":"observationGraph",
+                "title":"Weight / BMI",
+                "translationKey": "IMPL_WEIGHT_BMI",
+                "config":{
+                    "yAxisConcepts":[
+                        "Weight",
+                        "BMI"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":15
+                },
+                "displayOrder":150
+            },
+            "growthChart":{
+                "type":"observationGraph",
+                "title":"Growth Chart",
+                "translationKey": "IMPL_GROWTH_CHART",
+                "config":{
+                    "yAxisConcepts":[
+                        "BMI"
+                    ],
+                    "referenceData":"growthChartReference.csv",
+                    "numberOfVisits":15
+                },
+                "displayOrder":140
+            },
+            "testsInClinic":{
+                "type":"observationGraph",
+                "title":"Glucose",
+                "translationKey": "IMPL_TESTS_IN_CLINIC_CHART",
+                "config":{
+                    "yAxisConcepts":[
+                        "Cambodia_Fasting Blood Glucose",
+                        "Cambodia_PP Blood Glucose",
+                        "Cambodia_pH"
+                    ],
+                    "xAxisConcept":"observationDateTime",
+                    "numberOfVisits":15
+                },
+                "displayOrder":145
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,82 @@
+{
+	"bahmniClinicalPatientsSearchRadiologyOrderAllPatients":{
+	 "id": "bahmni.clinical.patients.search.RadiologyOrderAllPatients",
+	 "extensionPointId": "org.bahmni.patient.search",
+	 "type": "config",
+	 "extensionParams": {
+	  "searchHandler": "emrapi.sqlSearch.patientsHasPendingRadioOrders",
+	  "display":"Radiology Orders",
+	   "translationKey": "MODULE_LABEL_RADIOLOGY_ORDERS_KEY",
+	  "forwardUrl" : "../orders/#/patient/{{patientUuid}}/fulfillment/Radiology Order",
+	  "forwardButtonTitle" : "View",
+	  "view":""
+	 },
+	 "label": "Radiology Order",
+	 "order": 7,
+	 "requiredPrivilege": "app:orders"
+	 },
+	 	"bahmniClinicalPatientsSearchMicroOrderAllPatients":{
+	 "id": "bahmni.clinical.patients.search.MicroOrderAllPatients",
+	 "extensionPointId": "org.bahmni.patient.search",
+	 "type": "config",
+	 "extensionParams": {
+	  "searchHandler": "emrapi.sqlSearch.patientsHasPendingMicroOrders",
+	  "display":"Microbiology Orders",
+	  "translationKey": "MODULE_LABEL_MICRO_ORDERS_KEY",
+	  "forwardUrl" : "../orders/#/patient/{{patientUuid}}/fulfillment/Microbiology Order",
+	  "forwardButtonTitle" : "View",
+	  "view":""
+	 },
+	 "label": "Microbiology Results",
+	 "order": 4,
+	 "requiredPrivilege": "app:orders"
+	 },
+	 	"bahmniClinicalPatientsSearchHemaOrderAllPatients":{
+	 "id": "bahmni.clinical.patients.search.HemaOrderAllPatients",
+	 "extensionPointId": "org.bahmni.patient.search",
+	 "type": "config",
+	 "extensionParams": {
+	  "searchHandler": "emrapi.sqlSearch.patientsHasPendingHemaOrders",
+	  "display":"Hematology Orders",
+	  "translationKey": "MODULE_LABEL_HEMA_ORDERS_KEY",
+	  "forwardUrl" : "../orders/#/patient/{{patientUuid}}/fulfillment/Hematology Order",
+	  "forwardButtonTitle" : "View",
+	  "view":""
+	 },
+	 "label": "Hematology Results",
+	 "order": 3,
+	 "requiredPrivilege": "app:orders"
+	 },
+	 	"bahmniClinicalPatientsSearchLabOrderAllPatients":{
+	 "id": "bahmni.clinical.patients.search.LabOrderAllPatients",
+	 "extensionPointId": "org.bahmni.patient.search",
+	 "type": "config",
+	 "extensionParams": {
+	  "searchHandler": "emrapi.sqlSearch.patientsHasPendingLabOrders",
+	  "display":"Serology Orders",
+	  "translationKey": "MODULE_LABEL_LAB_ORDERS_KEY",
+	  "forwardUrl" : "../orders/#/patient/{{patientUuid}}/fulfillment/Lab Order",
+	  "forwardButtonTitle" : "View",
+	  "view":""
+	 },
+	 "label": "Serology Results",
+	 "order": 2,
+	 "requiredPrivilege": "app:orders"
+	 },
+	 	"bahmniClinicalPatientsSearchChemOrderAllPatients":{
+	 "id": "bahmni.clinical.patients.search.ChemOrderAllPatients",
+	 "extensionPointId": "org.bahmni.patient.search",
+	 "type": "config",
+	 "extensionParams": {
+	  "searchHandler": "emrapi.sqlSearch.patientsHasPendingChemOrders",
+	  "display":"Chemistry Orders",
+	  "translationKey": "MODULE_LABEL_CHEM_ORDERS_KEY",
+	  "forwardUrl" : "../orders/#/patient/{{patientUuid}}/fulfillment/Chemistry Order",
+	  "forwardButtonTitle" : "View",
+	  "view":""
+	 },
+	 "label": "Chemistry Results",
+	 "order": 1,
+	 "requiredPrivilege": "app:orders"
+	 }
+}

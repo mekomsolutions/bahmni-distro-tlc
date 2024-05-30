@@ -1,0 +1,280 @@
+{
+    "pivotVisit": {
+        "name": "Total Visits (weight recorded)",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "conceptNamesToFilter":["WEIGHT"],
+                    "conceptNameDisplayFormat": "shortNamePreferred",
+                    "ageGroupName": "Adult Child"
+                }
+            },
+            "rowGroups": [    "Concept Name"  ],
+            "columnGroups": [      "Location Name"    ,"Adult Child", "Gender"       ],
+            "distinctGroups": [      "Visit Id"  ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },
+    "pivotPatient": {
+        "name": "Total Patients (weight recorded)",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "conceptNamesToFilter":["WEIGHT"],
+                    "conceptNameDisplayFormat": "shortNamePreferred",
+                    "ageGroupName": "Adult Child"
+                }
+            },
+            "rowGroups": [    "Concept Name"  ],
+            "columnGroups": [      "Location Name"    ,"Adult Child", "Gender"       ],
+            "distinctGroups": [      "Patient Id"  ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },
+    "pivotNewPatient": {
+        "name": "Total New Patients (row: First visit = Yes)",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "visits",
+                "config": {
+                    "patientAddresses": ["city_village"],
+                    "patientAttributes": ["impl.patientStatus"],
+                    "ageGroupName": "Adult Child"
+                }
+            },
+            "rowGroups": [ "impl.patientStatus","New patient visit" ],
+            "columnGroups": [    "city_village", "Adult Child","Gender" ],
+            "distinctGroups": [ "Visit Id" ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },
+    "pivotDiagnosis": {
+        "name": "Total Diagnoses",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "conceptNamesToFilter":["Coded Diagnosis", "Offline Diagnosis"],
+                    "conceptNameDisplayFormat": "shortNamePreferred",
+                    "ignoreEmptyValues":true,
+                    "ageGroupName": "Adult Child"
+                }
+            },
+            "rowGroups": [        "Concept Name", "value"],
+            "columnGroups": [         "Location Name"      ,  "Adult Child",   "Gender"          ],
+            "distinctGroups": [    "Obs Id"  ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },
+    "pivotDiagnosisHC1": {
+        "name": "Total Diagnoses HC1",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "conceptNamesToFilter":["Coded Diagnosis", "Offline Diagnosis"],
+                    "conceptNameDisplayFormat": "shortNamePreferred",
+                    "ignoreEmptyValues":true,
+                    "ageGroupName": "hc1"
+                }
+            },
+            "rowGroups": [        "Concept Name", "value"],
+            "columnGroups": [         "Location Name"      ,  "hc1",   "Gender"      ],
+            "distinctGroups": [    "Obs Id"  ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },
+    "DiagnosisHC1":{
+        "name": "Diagnosis by Location for Old Case (Secondary)",
+        "type": "observations",
+        "config": {
+            "patientAttributes": ["familyNameLocal","givenNameLocal"],
+            "showVisitInfo": false,
+            "showProvider": true,
+            "conceptNamesToFilter": ["Coded Diagnosis", "Diagnosis Certainty", "Diagnosis order", "Offline Diagnosis Entry"],
+            "conceptValuesToFilter":[""],
+            "conceptClassesToFilter": [],
+            "preferredColumns": ["Visit Start Date","Location Name","Coded Diagnosis", "Diagnosis Certainty", "Diagnosis order", "Offline Diagnosis","Non-coded Offline Diagnosis","Offline Diagnosis Certainty", "Offline Diagnosis order", "Age", "Gender", "familyNameLocal","givenNameLocal","Patient Name", "Provider", "Adult Child" ],
+            "sortBy" : [{"column" : "Location Name", "sortOrder" : "asc"}],
+            "encounterPerRow": true,
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "excludeColumns": ["Birthdate", "Program Name", "Program Enrollment Date", "Program End Date","Patient Created Date","Visit Stop Date","Visit Type"]
+        }
+    },
+    "pivotDiagType": {
+        "name": "Total Statistics",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "conceptNamesToFilter":["Cambodia_ANC Visit Number","Coded Diagnosis","Non-coded Diagnosis", "Offline Diagnosis" , "Offline Diagnosis","Non-coded Offline Diagnosis","Cambodia_New Immunization","Cambodia_ANC Referral","Cambodia_Acceptor"],
+                    "conceptValuesToFilter": ["Cambodia_ANC Visit 1","Cambodia_ANC Visit 2","Cambodia_ANC Visit 3","Cambodia_ANC Visit 4",
+                        "Cambodia_HIV","Cambodia_Postpartum",
+                        "True","False",
+                        "Trachoma","Abscess of eyelid","Chalazion","Blepharitis","Trichiasis","Lagophthalmos","Ptosis of eyelid","Xanthelasma of eyelid","Cysts of eyelid","Dermatochalasis of eyelid","Dacryoadenitis","Dry eye syndrome","Lacrimal cyst","Epiphora","Acute dacryocystitis","Chronic dacryocystitis","Cyst of orbit","Conjunctivitis","Pterygium of eye","Keratitis","Corneal ulcer","Uveitis","Age related cataract","Cataract, other","Glaucoma","Visual disturbances","Otitis externa","Otitis media, unspecified","Otitis media, chronic","Eye diseases","Eye problem, other",
+                        "Cambodia_Polio1","Cambodia_Polio2","Cambodia_Polio3","Cambodia_IPV","Cambodia_DTP-Hep-Hip1","Cambodia_DTP-Hep-Hip2","Cambodia_DTP-Hep-Hip3","Cambodia_PCV1","Cambodia_PCV2","Cambodia_PCV3","Cambodia_JE","Cambodia_MR0","Cambodia_MR1","Cambodia_MR2","Cambodia_Tetanus1","Cambodia_Tetanus2","Cambodia_Tetanus3","Cambodia_Tetanus4","Cambodia_Tetanus5"],
+                    "ignoreEmptyValues":true,
+                    "ageGroupName": "Adult Child",
+                    "conceptNameDisplayFormat": "shortNamePreferred"
+                }
+            },
+            "rowGroups": [       "Concept Name", "value"          ],
+            "columnGroups": [    "Location Name"    ,"Adult Child", "Gender"       ],
+            "distinctGroups": [    "Obs Id"  ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },    
+    "visitReport": {
+        "name": "Visits",
+        "type": "visits",
+        "config": {
+            "patientAddresses": ["city_village"],
+            "preferredColumns": ["city_village"],
+            "patientAttributes": ["familyNameLocal","givenNameLocal","impl.patientStatus","impl.other","impl.phoneNumber","impl.2ndPhoneNumber","impl.email","impl.nationality","impl.distanceFromHealthCenter", "impl.guardianName"],
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "excludeColumns": ["Date stopped", "Date Of Admission", "Date Of Discharge", "Visit Type"]
+        }
+    },
+    "compDiagChrono":{
+        "name": "Complaint Diagnosis by Time",
+        "type": "observations",
+        "config": {
+            "patientAttributes": ["familyNameLocal","givenNameLocal"],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "conceptNamesToFilter": ["Chief Complaint", "Cambodia_Chief Complaint", "Coded Diagnosis", "Diagnosis Certainty","Diagnosis order", "Offline Diagnosis", "Offline Diagnosis Entry", "Cambodia_Offline Medication"],
+            "conceptValuesToFilter":[],
+            "conceptClassesToFilter": [],
+            "ageGroupName": "Adult Child",
+            "preferredColumns": ["Visit Start Date","Location Name","Chief Complaint", "Cambodia_Chief Complaint", "Coded Diagnosis", "Diagnosis Certainty", "Diagnosis order", "Offline Diagnosis", "Non-coded Offline Diagnosis","Offline Diagnosis Certainty", "Offline Diagnosis order", "Cambodia_Offline Medication", "Age", "Gender", "Adult Child","Patient Identifier", "impl.legacyId", "familyNameLocal","givenNameLocal","Patient Name", "Provider", "Adult Child" ],
+            "sortBy" : [{"column" : "Visit Start Date", "sortOrder" : "asc"}],
+            "encounterPerRow": true,
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "excludeColumns": ["Birthdate", "Program Name", "Program Enrollment Date", "Program End Date","Patient Created Date","Visit Stop Date","Visit Type"]
+        }
+    },
+    "compDiag":{
+        "name": "Complaint Diagnosis by Age",
+        "type": "observations",
+        "config": {
+            "patientAttributes": ["familyNameLocal","givenNameLocal"],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "conceptNamesToFilter": ["Chief Complaint", "Cambodia_Chief Complaint", "Coded Diagnosis", "Diagnosis Certainty","Diagnosis order", "Offline Diagnosis", "Offline Diagnosis Entry", "Cambodia_Offline Medication"],
+            "conceptValuesToFilter":[],
+            "conceptClassesToFilter": [],
+            "ageGroupName": "Adult Child",
+            "preferredColumns": ["Visit Start Date","Location Name","Chief Complaint", "Cambodia_Chief Complaint", "Coded Diagnosis", "Diagnosis Certainty", "Diagnosis order", "Offline Diagnosis", "Non-coded Offline Diagnosis","Offline Diagnosis Certainty", "Offline Diagnosis order", "Cambodia_Offline Medication", "Age", "Gender", "Adult Child","Patient Identifier", "impl.legacyId", "familyNameLocal","givenNameLocal","Patient Name", "Provider", "Adult Child" ],
+            "sortBy" : [{"column" : "Age", "sortOrder" : "asc"}],
+            "encounterPerRow": true,
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "excludeColumns": ["Birthdate", "Program Name", "Program Enrollment Date", "Program End Date","Patient Created Date","Visit Stop Date","Visit Type"]
+        }
+    },
+    "compLoc":{
+        "name": "Complaint Diagnosis by Location",
+        "type": "observations",
+        "config": {
+            "patientAttributes": ["familyNameLocal","givenNameLocal"],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "conceptNamesToFilter": ["Chief Complaint", "Cambodia_Chief Complaint", "Coded Diagnosis", "Diagnosis Certainty","Diagnosis order", "Offline Diagnosis", "Offline Diagnosis Entry", "Cambodia_Offline Medication"],
+            "conceptValuesToFilter":[],
+            "conceptClassesToFilter": [],
+            "ageGroupName": "Adult Child",
+            "preferredColumns": ["Visit Start Date","Location Name","Chief Complaint", "Cambodia_Chief Complaint", "Coded Diagnosis", "Diagnosis Certainty", "Diagnosis order", "Offline Diagnosis", "Non-coded Offline Diagnosis","Offline Diagnosis Certainty", "Offline Diagnosis order", "Cambodia_Offline Medication", "Age", "Gender", "Adult Child","Patient Identifier", "impl.legacyId", "familyNameLocal","givenNameLocal","Patient Name", "Provider", "Adult Child" ],
+            "sortBy" : [{"column" : "Location Name", "sortOrder" : "asc"}],
+            "encounterPerRow": true,
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "excludeColumns": ["Birthdate", "Program Name", "Program Enrollment Date", "Program End Date","Patient Created Date","Visit Stop Date","Visit Type"]
+        }
+    },
+    "dentalForms":{
+        "name": "Dental",
+        "type": "observations",
+        "config": {
+            "patientAttributes": ["familyNameLocal","givenNameLocal","impl.other"],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "conceptNamesToFilter": ["Cambodia_Dental Exam Form"],
+            "sortBy" : [{"column" : "Age", "sortOrder" : "asc"}],
+            "encounterPerRow": true,
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "conceptNameDisplayFormat":"shortNamePreferred",
+            "excludeColumns": ["Patient Created Date","Birthdate", "Program Name", "Program Enrollment Date", "Program End Date", "Visit Stop Date", "Visit Type"]
+        }
+    },
+    "midwifeForms":{
+        "name": "Midwife",
+        "type": "observations",
+        "config": {
+            "patientAttributes": ["familyNameLocal","givenNameLocal","impl.other"],
+            "showProvider": true,
+            "programsToFilter": [],
+            "conceptNamesToFilter": ["Cambodia_ANC Obstetric History Form", "Cambodia_ANC Visit Form", "Cambodia_PNC Form","Cambodia_Birth Spacing Form"],
+            "encounterPerRow": false,
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "ignoreEmptyValues": true,
+            "conceptNameDisplayFormat":"shortNamePreferred",
+            "excludeColumns": ["Visit Type","Patient Created Date","Observation Date", "Observation Created Date","Birthdate", "Program Name", "Program Enrollment Date", "Program End Date"  ],
+            "sortBy":[{"column":"Location Name"}]
+        }
+    },
+    "pivotClinic": {
+        "name": "Name, Age, Weight, Gender per Clinic (find duplicates)",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "patientAttributes": ["familyNameLocal","givenNameLocal"],
+                    "conceptNamesToFilter":["WEIGHT"]
+                }
+            },
+            "rowGroups": [     "Location Name"    ,"Patient Name", "givenNameLocal", "familyNameLocal", "Age" , "value"  ],
+            "columnGroups": [     "Gender"      ],
+            "distinctGroups": [      "Patient Id"  ],
+            "ignoreEmptyValues":true,
+            "showTotalRow":false,
+            "showTotalColumn":false
+        }
+    },
+    "visitReportLoc": {
+        "name": "Visits by Location (find Village mistakes)",
+        "type": "visits",
+        "config": {
+            "patientAddresses": ["city_village"],
+            "preferredColumns": ["city_village"],
+            "patientAttributes": ["familyNameLocal","givenNameLocal","impl.patientStatus","impl.other","impl.phoneNumber","impl.2ndPhoneNumber","impl.email","impl.nationality","impl.distanceFromHealthCenter", "impl.guardianName"],
+            "additionalPatientIdentifiers": ["impl.legacyId"],
+            "excludeColumns": ["Date stopped", "Date Of Admission", "Date Of Discharge", "Visit Type"],
+            "sortBy" : [{"column" : "city_village", "sortOrder" : "desc"}]
+        }
+    },
+    "drug": {
+        "name": "Drugs",
+        "type": "OrderFulfillmentReport",
+        "config": {
+            "type": "OrderFulfillmentReport",
+            "orderTypes": [      "Drug Order"      ]
+        }
+    }
+}

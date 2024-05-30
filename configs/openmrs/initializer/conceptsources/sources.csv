@@ -1,0 +1,10 @@
+Uuid,Void/Retire,Name,Description,HL7 Code,Unique ID
+706a448b-3f10-11e4-adec-0800271c1b75,,org.openmrs.module.emrapi,Source used to tag concepts used in the EMR API module,,
+cb523690-9012-4e72-b8bf-4253e1b1a687,,SNOMED,SNOMED Duration Source,SCT,
+dbe4f23e-4e14-11e4-8a57-0800271c1b75,,ICD 10 - WHO,ICD 10 - WHO,ICD 10 - WHO,
+f0217041-1175-42fd-a40e-244d01f34d17,,PACS Procedure Code,LOINC equivalent for procedure codes,LOINC,
+693375ad-12b2-11e6-8c00-080027d2adbd,,CEIL,CEIL Bacteriology concept source,CEIL,
+6935fa65-12b2-11e6-8c00-080027d2adbd,,org.openmrs.module.bacteriology,concept source for bacteriology module,BACT,
+6b007238-12b2-11e6-8c00-080027d2adbd,,Abbreviation,Custom dictionary for storing abbreviation of concepts,,
+213e091b-fd4b-42c3-bdd8-3205ce711262,,Cambodia,Concept source used to map a every concept added in the OpenMRS distribution for Cambodia,,
+5f9768e5-d525-4c79-b5e6-dc07881a1c85,,ICD-10,ICD-10,ICD-10,

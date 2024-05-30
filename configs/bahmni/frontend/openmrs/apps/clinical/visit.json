@@ -1,0 +1,29 @@
+{
+    "general":{
+        "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
+        "displayByDefault": false,
+        "printing": {
+            "title": "Bahmni",
+            "header": "Visit",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "defaultSections": false,
+        "sections": {
+            "obser":{
+                "type": "observation",
+                "displayOrder": 2,
+                "translationKey":"IMPL_OBSERVATIONS",
+                "config": {
+                    "conceptNames": [ 
+                    ]
+                }
+            }
+        }
+    },
+    "stubTab":{
+        "translationKey": "IMPL_OBSERVATIONS",
+        "defaultSections": true,
+        "sections": {
+        }
+    }
+}

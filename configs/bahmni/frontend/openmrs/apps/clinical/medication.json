@@ -1,0 +1,120 @@
+{
+  "commonConfig": {
+  },
+  "tabConfig": {
+    "allMedicationTabConfig": {
+      "inputOptionsConfig": {
+        "defaultDurationUnit": "Day(s)",
+        "hideOrderSet" : false,
+        "defaultInstructions": "As directed",
+          "frequencies":  [
+          "QD - 1X /day",
+          "BID - 2X /day",
+          "TID - 3X /day",
+          "QID - 4X /day",
+          "STAT - Immediately"
+        ],
+        "doseUnits": [
+          "Capsule(s)",
+          "Puff(s)",
+          "Unit(s)",
+          "Drop",
+          "ml",
+          "Tablet(s)",
+          "Teaspoon",
+          "Tablespoon",
+          "mg",
+          "IU"
+        ],
+        "routes": [
+          "PO - Oral",
+          "Tongue",
+          "Eye drop",
+          "NAS - Nasal (nose)",
+          "TOP - Topical (skin)",
+          "INH - Inhalation",
+          "SC - Subcutaneous (under skin)",
+          "PR - Per rectum",
+          "PV - Per vagina",
+          "ID - Intradermal",
+          "IV - Intravenous",
+          "IM - Intramuscular"
+        ],
+        "frequencyDefaultDurationUnitsMap": [
+          {
+            "minFrequency": "1/7",
+            "maxFrequency": 5,
+            "defaultDurationUnit": "Day(s)"
+          },
+          {
+            "minFrequency": "1/30",
+            "maxFrequency": "1/7",
+            "defaultDurationUnit": "Week(s)"
+          },
+          {
+            "minFrequency": null,
+            "maxFrequency": "1/30",
+            "defaultDurationUnit": "Month(s)"
+          }
+        ],
+        "drugFormDefaults": {
+          "Capsule": {
+            "doseUnits": "Capsule(s)",
+            "route": "PO - Oral"
+          },
+          "Inhaler": {
+            "doseUnits": "Puff(s)",
+            "route": "INH - Inhalation"
+          },
+          "Injection": {
+            "doseUnits": "Unit(s)",
+            "route": "IV - Intravenous"
+          },          
+          "Solution": {
+            "doseUnits": "Unit(s)",
+            "route": "IV - Intravenous"
+          },
+          "Nasal Solution": {
+            "doseUnits": "Drop",
+            "route": "NAS - Nasal (nose)"
+          },
+          "Drops": {
+            "doseUnits": "Drop"
+          },
+          "Cream": {
+            "doseUnits": "Unit(s)",
+            "route": "TOP - Topical (skin)"
+          },
+          "Lotion": {
+            "doseUnits": "Unit(s)",
+            "route": "TOP - Topical (skin)"
+          },
+          "Ointment": {
+            "doseUnits": "Unit(s)"
+          },
+          "Pessary": {
+            "doseUnits": "Unit(s)",
+            "route": "PV - Per vagina"
+          },
+          "Powder": {
+            "doseUnits": "Unit(s)",
+            "route": "PO - Oral"
+          },
+          "Suspension": {
+            "doseUnits": "ml",
+            "route": "PO - Oral"
+          },
+          "Syrup": {
+            "doseUnits": "ml",
+            "route": "PO - Oral"
+          },
+          "Tablet": {
+            "doseUnits": "Tablet(s)",
+            "route": "PO - Oral"
+          }
+        },
+        "routesToMakeDoseSectionNonMandatory" : ["TOP - Topical (skin)", "IV - Intravenous"]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Uuid,Void/Retire,Name,Description,Java class name,Parent,Concept Classes
+a93fdb93-447d-11e8-bb61-0242ac110002,,Chemistry Order,An order for a Chemistry test,org.openmrs.Order,,ChemTest;ChemSet
+a94107a6-447d-11e8-bb61-0242ac110002,,Hematology Order,An order for Hematology test,org.openmrs.Order,,HemaTest;HemaSet
+a941bbd7-447d-11e8-bb61-0242ac110002,,Microbiology Order ,An order for Microbiology test,org.openmrs.Order,,MicroTest;MicroSet
+8189dbdd-3f10-11e4-adec-0800271c1b75,,Radiology Order,An order for radiology tests,org.openmrs.Order,,Radiology
+131168f4-15f5-102d-96e4-000c29c2a5d7,,Drug Order,An order for a medication to be given to the patient,org.openmrs.DrugOrder,,Drug
+8189b409-3f10-11e4-adec-0800271c1b75,,Lab Order,An order for laboratory tests,org.openmrs.Order,,LabTest;LabSet

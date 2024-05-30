@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+	<changeSet id="2024-04-25-21-32" author="ruhanga">
+		<comment>
+			Set date create to recorgnised java timestamp
+		</comment>
+	    <sql>
+	        UPDATE order_type
+	        SET date_created = CURRENT_TIMESTAMP
+	        WHERE CAST(date_created AS CHAR(20)) = '0000-00-00 00:00:00';
+	    </sql>
+	</changeSet>
+</databaseChangeLog>
