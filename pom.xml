@@ -1,8 +1,8 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.mekomsolutions</groupId>
-  <artifactId>openmrs-distro-cambodia</artifactId>
-  <name>OpenMRS distribution for Cambodia</name>
+  <artifactId>bahmni-distro-tlc</artifactId>
+  <name>Bahmni distribution for TLC</name>
   <version>1.2.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -83,13 +83,13 @@
   <dependencies>
     <dependency>
       <groupId>net.mekomsolutions</groupId>
-      <artifactId>openmrs-config-cambodia</artifactId>
+      <artifactId>openmrs-config-tlc</artifactId>
       <type>zip</type>
       <version>${openmrsconfigVersion}</version>
     </dependency>
     <dependency>
       <groupId>net.mekomsolutions</groupId>
-      <artifactId>bahmni-config-cambodia</artifactId>
+      <artifactId>bahmni-config-tlc</artifactId>
       <type>zip</type>
       <version>${bahmniconfigVersion}</version>
     </dependency>
@@ -325,7 +325,7 @@
               <excludeTransitive>true</excludeTransitive>
               <useBaseVersion>true</useBaseVersion>
               <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
-              <includeArtifactIds>openmrs-config-cambodia</includeArtifactIds>
+              <includeArtifactIds>openmrs-config-tlc</includeArtifactIds>
             </configuration>
           </execution>
           <!-- Bahmni config -->
@@ -339,7 +339,7 @@
               <excludeTransitive>true</excludeTransitive>
               <useBaseVersion>true</useBaseVersion>
               <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
-              <includeArtifactIds>bahmni-config-cambodia</includeArtifactIds>
+              <includeArtifactIds>bahmni-config-tlc</includeArtifactIds>
             </configuration>
           </execution>
           <!-- Bahmni Apps -->
@@ -398,7 +398,7 @@
               <target>
                 <move todir="${distro.openmrsconfigDir}">
                   <fileset dir="${distro.openmrsconfigDir}" />
-                  <mapper type="regexp" from="^openmrs-config-cambodia(.+)\.zip" to="config.zip" />
+                  <mapper type="regexp" from="^openmrs-config-tlc(.+)\.zip" to="config.zip" />
                 </move>
               </target>
             </configuration>
@@ -413,7 +413,7 @@
               <target>
                 <move todir="${distro.bahmniconfigDir}">
                   <fileset dir="${distro.bahmniconfigDir}" />
-                  <mapper type="regexp" from="^bahmni-config-cambodia(.+)\.zip" to="config.zip" />
+                  <mapper type="regexp" from="^bahmni-config-tlc(.+)\.zip" to="config.zip" />
                 </move>
               </target>
             </configuration>
