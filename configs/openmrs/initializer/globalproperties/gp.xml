@@ -14,7 +14,7 @@
     </globalProperty>
     <globalProperty>
       <property>concept.reasonForDeath</property>
-      <value></value>
+      <value>Cause of death</value>
     </globalProperty>
     <globalProperty>
       <property>emrapi.visitExpireHours</property>
