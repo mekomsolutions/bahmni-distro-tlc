@@ -66,7 +66,6 @@
     <uiframeworkVersion>3.22.1</uiframeworkVersion>
     <uilibraryVersion>2.0.5</uilibraryVersion>
     <webservices.restVersion>2.29.0</webservices.restVersion>
-    <commonReportsVersion>1.3.0</commonReportsVersion>
     <reportingrestVersion>1.10.0</reportingrestVersion>
     <auditLogVersion>1.1-1.0.0</auditLogVersion>
     <bahmniReportsVersion>0.94-1.1.0</bahmniReportsVersion>
@@ -247,11 +246,6 @@
       <groupId>org.openmrs.module</groupId>
       <artifactId>patientsummary-omod</artifactId>
       <version>${patientsummaryVersion}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openmrs.module</groupId>
-      <artifactId>commonreports-omod</artifactId>
-      <version>${commonReportsVersion}</version>
     </dependency>
   </dependencies>
 
