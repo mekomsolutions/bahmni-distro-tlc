@@ -26,7 +26,7 @@
     <distro.openmrsmodulesDir>${distro.baseDir}/openmrs_modules</distro.openmrsmodulesDir>
 
     <!-- Core -->
-    <openMRSVersion>2.1.1</openMRSVersion>
+    <openMRSVersion>2.1.3</openMRSVersion>
 
     <!-- Bahmni Apps -->
     <bahmniappsRevision>a63f511</bahmniappsRevision>
