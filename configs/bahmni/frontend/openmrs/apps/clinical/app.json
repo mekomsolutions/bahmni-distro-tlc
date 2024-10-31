@@ -64,6 +64,10 @@
       "maxConceptSetLevels": 3,
       "allowOnlyCodedDiagnosis": true,
       "conceptSetUI": {
+        "Cambodia_New Case": {
+          "required": true,
+          "disableAddNotes": true
+        },
         "Cambodia_Complaint Desc common": {
             "disableAddNotes": true,
             "multiSelect": true
