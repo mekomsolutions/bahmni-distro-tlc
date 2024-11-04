@@ -56,6 +56,45 @@
             "showTotalColumn":true
         }
     },
+    "pivotComplaint": {
+        "name": "Total Chief Complaints",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "conceptNamesToFilter":["Chief Complaint","Cambodia_Chief Complaint"],
+                    "conceptNameDisplayFormat": "shortNamePreferred",
+                    "ageGroupName": "Adult Child"
+                }
+            },
+            "rowGroups": [       "Concept Name", "value"        ],
+            "columnGroups": [      "Location Name" ,       "Adult Child" , "Gender"       ],
+            "distinctGroups": [    "Obs Id"    ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },
+    "pivotDental": {
+        "name": "Total Dental",
+        "type": "aggregation",
+        "config": {
+            "report":{
+                "type": "observations",
+                "config": {
+                    "conceptNamesToFilter":["Cambodia_Small Dental Surgery Set", "Cambodia_Teeth Extracted","Cambodia_Teeth Filled","Coded Diagnosis","Non-coded Diagnosis", "Offline Diagnosis", "Non-coded Offline Diagnosis"],
+                    "conceptValuesToFilter": ["","Supernumerary teeth","Embedded and impacted teeth","Dental caries","Diseases of hard teeth tissue, other","Cracked tooth","Acute gingivitis","Chronic gingivitis","Dental Abscess","Dental problem","Oral diseases, other","Oral ulcer, other forms of stomatitis","Stomatitis","CAMBODIA_Tooth 11","CAMBODIA_Tooth 12","CAMBODIA_Tooth 13","CAMBODIA_Tooth 14","CAMBODIA_Tooth 15","CAMBODIA_Tooth 16","CAMBODIA_Tooth 17","CAMBODIA_Tooth 18","CAMBODIA_Tooth 21","CAMBODIA_Tooth 22","CAMBODIA_Tooth 23","CAMBODIA_Tooth 24","CAMBODIA_Tooth 25","CAMBODIA_Tooth 26","CAMBODIA_Tooth 27","CAMBODIA_Tooth 28","CAMBODIA_Tooth 31","CAMBODIA_Tooth 32","CAMBODIA_Tooth 33","CAMBODIA_Tooth 34","CAMBODIA_Tooth 35","CAMBODIA_Tooth 36","CAMBODIA_Tooth 37","CAMBODIA_Tooth 38","CAMBODIA_Tooth 41","CAMBODIA_Tooth 42","CAMBODIA_Tooth 43","CAMBODIA_Tooth 44","CAMBODIA_Tooth 45","CAMBODIA_Tooth 46","CAMBODIA_Tooth 47","CAMBODIA_Tooth 48","CAMBODIA_Tooth 51","CAMBODIA_Tooth 52","CAMBODIA_Tooth 53","CAMBODIA_Tooth 54","CAMBODIA_Tooth 55","CAMBODIA_Tooth 61","CAMBODIA_Tooth 62","CAMBODIA_Tooth 63","CAMBODIA_Tooth 64","CAMBODIA_Tooth 65","CAMBODIA_Tooth 71","CAMBODIA_Tooth 72","CAMBODIA_Tooth 73","CAMBODIA_Tooth 74","CAMBODIA_Tooth 75","CAMBODIA_Tooth 81","CAMBODIA_Tooth 82","CAMBODIA_Tooth 83","CAMBODIA_Tooth 84","CAMBODIA_Tooth 85"],
+                    "conceptNameDisplayFormat": "shortNamePreferred",
+                    "ageGroupName": "Adult Child"
+                }
+            },
+            "rowGroups": [    "Concept Name" , "value" ],
+            "columnGroups": [      "Location Name"    ,"Adult Child", "Gender"       ],
+            "distinctGroups": [      "Obs Id"  ],
+            "showTotalRow":true,
+            "showTotalColumn":true
+        }
+    },
     "pivotDiagnosis": {
         "name": "Total Diagnoses",
         "type": "aggregation",
