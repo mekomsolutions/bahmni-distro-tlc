@@ -1,0 +1,7 @@
+"Uuid","Void/Retire","Name","Description","Required","Format","Format description","Validator","Location behavior","Uniqueness behavior"
+"3de55f65-908e-4bb6-ab84-ba45091ef968",,"impl.hefId","impl.hefId.desc","FALSE",,,,"NOT_USED",
+"43ea64a0-5727-492c-81a0-d9b8c7baeef0",,"impl.nationalIdCard","impl.nationalIdCard.desc","FALSE",,,,"NOT_USED",
+"91a9d35d-ff9c-455b-8c10-24d6c2c5c71f",,"impl.pmrsId","impl.pmrsId.desc","FALSE","^[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]","impl.pmrsId.desc.format",,"NOT_USED",
+"bf296dc6-3132-4637-a7d1-ca1e8da82e4b",,"impl.legacyId","impl.legacyId.desc","FALSE",,,,"NOT_USED","UNIQUE"
+"8d793bee-c2cc-11de-8d13-0010c6dffd0f",,"impl.openmrsId","impl.openmrsId.desc","FALSE","[0-9]{6}[0-9]{1}","impl.openmrsId.desc.format","org.openmrs.module.idgen.validator.LuhnMod10IdentifierValidator","NOT_USED","UNIQUE"
+"cb013d56-d1e0-4a1f-8d6e-652b35ec191d",,"Patient Identifier","New patient identifier type created for use by the Bahmni Registration System","FALSE",,,,"NOT_USED",,
