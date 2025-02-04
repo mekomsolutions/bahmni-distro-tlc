@@ -1,0 +1,8 @@
+services:
+
+  env-substitution:
+    environment:
+      - ODOO_HOST=${ODOO_HOST:-http://odoo}
+      - ODOO_USER=${ODOO_USER}
+      - ODOO_PASSWORD=${ODOO_PASSWORD}
+      - ODOO_DB=${ODOO_DB:-odoo}
