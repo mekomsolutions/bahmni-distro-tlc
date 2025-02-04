@@ -1,3 +1,2 @@
 docker-compose-common.yml
 docker-compose-bahmniemr.yml
-docker-compose-override.yml

@@ -6,7 +6,3 @@ services:
       - ODOO_USER=${ODOO_USER}
       - ODOO_PASSWORD=${ODOO_PASSWORD}
       - ODOO_DB=${ODOO_DB:-odoo}
-
-  eip-openmrs-senaite:
-    environment:
-      - RUN_WITH_BAHMNI_EMR=true
