@@ -1,9 +1,0 @@
-Uuid,Void/Retire,Name,Description,Format,Foreign uuid,Searchable,Edit privilege,_order:1000
-c3bcd296-eb82-4451-a4b4-eedd1d5f322f,,impl.phoneNumber,impl.phoneNumber.desc,java.lang.String,,TRUE,,
-1102f74e-ea2f-461e-b67f-db58bd136e5c,,impl.2ndPhoneNumber,impl.2ndPhoneNumber.desc,java.lang.String,,TRUE,,
-23bc8d94-344b-4143-b3f5-999e7cc89786,,impl.email,impl.email.desc,java.lang.String,,TRUE,,
-632d27a5-58c6-49f3-acb1-2a7b5855eaca,,impl.nationality,impl.nationality.desc,org.openmrs.Concept,c8b01687-086e-4f7e-ad0d-db77c423a2a7,,,
-1df3e8c6-564e-4da9-9094-5d36f68100c9,,impl.distanceFromHealthCenter,impl.distanceFromHealthCenter.desc,org.openmrs.Concept,acf4c89a-1731-430a-aefd-a5db1fe96ee8,,,
-f155a740-c252-4e45-bea6-51fd9706dcf7,,impl.other,impl.other.desc,java.lang.String,,,,
-d055d71b-1ace-47a5-87ea-249eb029b592,,impl.guardianName,impl.guardianName.desc,java.lang.String,,TRUE,,
-a4e9107d-175b-4e4d-b992-3ba155b94e4b,,impl.patientStatus,impl.patientStatus.desc,org.openmrs.Concept,cede5394-4d47-446f-85cc-e649673af6ea,,,

@@ -1,0 +1,6 @@
+services:
+
+  # Bahmni EIP routes
+  eip-bahmni:
+    environment:
+      - BAHMNI_TEST_ORDER_TYPE_UUID=8189b409-3f10-11e4-adec-0800271c1b75
